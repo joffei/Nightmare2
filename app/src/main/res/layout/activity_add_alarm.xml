@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.android.sixsigma.nightmare.AddAlarmActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/alarm_name_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/black"
+            android:hint="Alarm Name" />
+
+        <TimePicker
+            android:id="@+id/wake_up_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner" />
+
+        <TextView
+            android:id="@+id/repeat_label_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Repeat"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/darker_gray">
+
+            <LinearLayout
+                android:id="@+id/repeat_buttons_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4dp"
+                tools:targetApi="HONEYCOMB">
+
+                <Button
+                    android:id="@+id/sunday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="S"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <Button
+                    android:id="@+id/monday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="M"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <Button
+                    android:id="@+id/tuesday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="T"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <Button
+                    android:id="@+id/wednesday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="W"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <Button
+                    android:id="@+id/thursday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="T"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <Button
+                    android:id="@+id/friday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="F"
+                    android:background="@android:color/white"
+                    android:elevation="5dp"/>
+
+                <Button
+                    android:id="@+id/saturday_button"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="S"
+                    android:background="@android:color/white"
+                    android:elevation="5dp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/ring_tone_label_text_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ring Tone"
+            android:textSize="20sp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="5dp"/>
+
+        <RelativeLayout
+            android:id="@+id/ring_tone_selection_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:clickable="true">
+
+            <TextView
+                android:id="@+id/ring_tone_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ringtone Name"
+                android:textSize="18sp"
+                android:textColor="@android:color/black"/>
+
+            <ImageView
+                android:id="@+id/ring_tone_selector_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_keyboard_arrow_right_black_24dp"
+                android:layout_alignParentRight="true"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/darker_gray"
+            android:layout_marginTop="5dp"/>
+
+        <LinearLayout
+            android:id="@+id/final_decision_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right">
+
+            <TextView
+                android:id="@+id/cancel_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="abort"
+                android:textColor="@android:color/holo_red_dark"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_margin="8dp"
+                android:clickable="true" />
+
+            <TextView
+                android:id="@+id/save_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="save"
+                android:textColor="@android:color/holo_green_dark"
+                android:textSize="22sp"
+                android:textAllCaps="true"
+                android:layout_margin="8dp"
+                android:clickable="true" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
